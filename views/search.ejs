@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Events</title>
+    <link rel="stylesheet" href="/search.css" />
+  </head>
+  <body>
+    <header class="dashboard">
+      <nav class="sidebar">
+        <a href="/"><h2 class="logo">Touch of Class</h2></a>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="/dashboard">Profile</a></li>
+          <li>
+            <a class="nav-link" href="/events/"
+              >Featured Events</a
+            >
+          </li>
+          <li><a class="nav-link active-link" href="/search">Search</a></li>
+          <li><a class="nav-link" href="/host">Host</a></li>
+        </ul>
+        <form class="log-out" action="/logout" method="POST">
+          <button class="nav-dashboard-btn" id="account-btn">Log Out</button>
+        </form>
+      </nav>
+    </header>
+    <article>
+      <h2 class="heading">Search</h2>
+      <div class="container">
+        <div class="card">
+          <p class="enter">Enter your event's unique 24 character identifier</p>
+          <input type="text" id="input" />
+          <button type="submit" id="submit" class="submit">Submit</button>
+        </div>
+      </div>
+      <script>
+        let input = document.getElementById("input");
+        let submit = document.getElementById("submit");
+        submit.addEventListener("click", function () {
+          let ext = document.getElementById("input").value;
+          window.location.href = `/events/${ext}`;
+        });
+      </script>
+    </article>
+  </body>
+</html>

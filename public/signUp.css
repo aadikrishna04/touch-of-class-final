@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Lato";
+}
+
+body {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 5rem 4rem;
+  width: 75%;
+  height: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+html:not(body) {
+  background-color: rgb(241, 241, 241);
+}
+
+/* Styling the header */
+
+.register {
+  position: relative;
+  bottom: 4rem;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: -45px;
+}
+
+.instructions {
+  margin-bottom: 6px;
+}
+
+/* Organizing the columns */
+
+.line {
+  margin-bottom: 2rem;
+}
+
+.fill {
+  margin-bottom: 2rem;
+  width: 90%;
+}
+
+.info {
+  display: flex;
+}
+
+.col-1,
+.col-2 {
+  flex: 1;
+}
+
+/* Styling the inputs */
+
+input[type="text"],
+input[type="password"] {
+  width: 90%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid rgb(241, 241, 241);
+  padding: 1rem;
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:active {
+  outline: none;
+  border-bottom: 2px solid #4739d7;
+  transition: 0.3s;
+}
+
+/* Styling the register button */
+
+.registerbtn {
+  background-color: #4739d7;
+  font-size: 20px;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  border-radius: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #4739d7;
+  opacity: 0.8;
+}
+
+a:hover,
+a:active {
+  opacity: 1;
+}
+
+.terms {
+  margin-bottom: 1.5rem;
+}

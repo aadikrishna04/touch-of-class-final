@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Lato";
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  overflow: scroll;
+}
+
+body {
+  background: #f1f1f1;
+  display: flex;
+}
+
+/* Styling the navigation */
+
+.logo {
+  padding: 30px 0;
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sidebar {
+  background: #4739d7;
+  height: 100vh;
+  width: 250px;
+  padding-left: 30px;
+  font-size: 20px;
+}
+
+.nav-list {
+  color: #fff;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  display: block;
+  padding: 25px 0;
+  padding-left: 35px;
+  color: #fff;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  transition: all 0.2s;
+  background: #4739d7;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  background: rgb(241, 241, 241);
+  color: #4739d7;
+}
+
+.active-link:link,
+.active-link:visited {
+  background: rgb(241, 241, 241);
+  color: #4739d7;
+}
+
+.nav-dashboard-btn {
+  border-radius: 2rem;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: #fff;
+  color: #4739d7;
+  padding: 5px 10px 7px 10px;
+  transition: all 0.2s;
+  position: absolute;
+  bottom: 20px;
+  left: 93px;
+}
+
+.nav-dashboard-btn:hover {
+  cursor: pointer;
+  transition: all 0.4s;
+  background-color: rgba(173, 173, 173, 0.2);
+  color: rgb(241, 241, 241);
+}
+
+/* Organizing the dashboard card into columns */
+
+.dashboard {
+  flex: 1;
+}
+
+.info {
+  flex: 3.5;
+}
+
+.heading {
+  margin: 1rem 1rem;
+}
+
+.card-heading {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #4739d7;
+}
+
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  margin: 1rem 1rem;
+  margin-right: 25rem;
+  padding: 2rem;
+  padding-bottom: 0rem;
+  font-size: 14px;
+}
+
+.section-heading {
+  margin: 2.3rem 0rem;
+  margin-bottom: 2rem;
+}
+
+.pf-info {
+  display: flex;
+}
+
+.first-col {
+  flex: 1;
+}
+
+.second-col {
+  flex: 1;
+}
+
+.third-col {
+  flex: 1;
+}
+
+.phone {
+  margin-top: 2.2rem;
+}
+
+/* Styling the inputs */
+
+input {
+  margin: 1.7rem 0rem;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid rgb(241, 241, 241);
+  padding: 1rem;
+  padding-left: 0.2rem;
+}
+
+input:focus,
+input:active {
+  outline: none;
+  border-bottom: 2px solid #4739d7;
+  transition: 0.3s;
+}
+
+/* Styling the password toggle */
+
+.eye {
+  position: absolute;
+  top: 22.5rem;
+  left: 58rem;
+  cursor: pointer;
+  color: #7a797e;
+}
+
+.eye2 {
+  position: absolute;
+  top: 22.5rem;
+  left: 45rem;
+  cursor: pointer;
+  color: #7a797e;
+}
+
+#hide1 {
+  display: none;
+}
+
+#appear1 {
+  display: none;
+}
+
+/* Designing the profile card */
+
+.card2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  top: 3rem;
+  background: #fff;
+  border-radius: 1rem;
+  margin: 1rem 2rem;
+  margin-left: 48.5rem;
+  padding: 3rem 4rem 33.5rem 3rem;
+  height: 134px;
+}
+
+.profile {
+  height: 150px;
+  width: 150px;
+  margin-top: 9rem;
+  margin-left: 15px;
+  border-radius: 50%;
+  border: 10px solid #4739d7;
+}
+
+.name {
+  margin-top: 1rem;
+}
+
+.since {
+  color: grey;
+  margin-bottom: 4rem;
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="HandheldFriendly" content="true" />
+        <title>Touch of Class | Event Management Modernized</title>
+        <link rel="stylesheet" type="text/css" href="/style.css" />
+        <link rel="stylesheet" type="text/css" href="/queries.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.css" />
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+
+    </head>     
+    <body>
+        <div class="navbar-main-navbar">
+            <a class="navbar-logo" href="#">Touch of Class</a>
+            <div class="links-right">
+                <a class="navbar-link" href="#how">How it Works</a>
+                <a class="navbar-link" href="#contact">Contact</a>
+                <a class="navbar-link" href="#about">About Us</a>
+            </div>
+            <button
+                class="navbar-dashboard-btn"
+                onclick="window.location.href='/dashboard'"
+            >
+                <strong>Account ➜</strong>
+            </button>
+        </div>
+        <header>
+        <div class="hero-text">
+            <h1>
+                Revolutionizing<br />
+                The World of <br />
+                 Event Planning
+            </h1>
+            <p class="hero-desc">
+                Touch of Class's next generation event management system<br />makes
+                it easy for anyone to host a wonderful event. Interested?
+            </p>
+            <a href="#how" class="cta-btn dark"
+                >How it works <strong>↓</strong></a>
+
+            <script>
+                const links = document.querySelectorAll('a:link');
+                links.forEach(function(link) {
+                    link.addEventListener('click', function(i) {
+                        i.preventDefault();
+                        const href = link.getAttribute('href');
+                        
+                        if(href === '#') window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth',
+                        });
+
+                        if(href !== '#' && href.startsWith('#')) {
+                            const element = document.querySelector(href);
+                            element.scrollIntoView({
+                                behavior: 'smooth'
+                            })
+                        }
+
+                        if(link.classList.contains('navbar-link'))
+                            headerEl.classList.toggle('nav-open')
+                    });
+                });
+            </script>
+        </header>
+
+        <article>
+            <section class="how-it-works" id="how">
+                <h2>How it Works</h2>
+                    <div class="info-cards">
+                        <div class="card">
+                            <h3>Step 1</h3>
+                            <p class="description">Begin</p>
+                            <p>Create an account for free</p>
+                            <button
+                            id="account-btn"
+                            onclick="window.location.href='/dashboard'"
+                        >
+                            <strong>Account ➜</strong>
+                        </button>
+                        </div>
+                        <div class="card card-2">
+                            <h3>Step 2</h3>
+                            <p class="description">Access</p>
+                            <p id="description-card-2">Access the dashboard and view data regarding upcoming events or events from the pasts</p>
+                        </div>
+                        <div class="card">
+                            <h3>Step 3</h3>
+                            <p class="description">Develop</p>
+                            <p>Get to Booking your event!</p>
+                        </div>
+                    </div>
+            </section>
+
+            <section class="contact-wrapper" id="contact">
+                <h2>Contact Us</h2>
+                <p class="comment">Do you have any questions, comments, or concern? Feel free to reach out to us below</p>
+                <form action="https://formsubmit.co/2aec953eaad6081dc89f77e66a0885d9" method="POST">
+                    <div class="contact-form">
+                        <div class="inputs">
+                            <input type="text" required name="name" placeholder="Name" class="input">
+                            <input type="text" name="myemail" required placeholder="Email Address" class="input">
+                            <input type="text" name="phone" required placeholder="Phone" class="input">
+                            <input type="text" name="to" required placeholder="To" class="input">
+                        </div>
+                        <div class="message">
+                            <input type="text" name="subject" required placeholder="Subject" class="input">
+                            <textarea name="message" required placeholder="Message"></textarea>
+                            <button type="submit" class="send-btn">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            <section class="about-us-wrapper" id="about">
+                <h2>About Us</h2>
+                <div class="section-cards">
+                    <div class="col-1">
+                        <div class="about-card">
+                            <div class="member-img">
+                                <img src="img/about-aadi.png" class="picture" alt="team-member-image">
+                            </div>
+                            <div class="layer"></div>
+                            <h3>Aadit "Aadi" Krishna</h3>
+                            <p class="role">Project Manager, Back End</p>
+                            <p class="desc">Aadi is a sophomore at Centennial High School whose main interests are coding, playing tennis and video gaming. Aadi's dream is to use his coding skills to identify and solve a real world issue. He has self taught himself multiple programming languages such as Java, JavaScript, Python, and HTML 5/CSS 3. Aadi volunteers for Aceing Autism, Frisco Food Bank and Dallas Tennis Association. </p>
+                            <a href="https://www.instagram.com/aadikrishna04/" target="_blank" class="insta"><i class="fab fa-instagram fa-2x"></i></a>
+                        </div>
+                        <div class="about-card">
+                            <div class="member-img">
+                                <img src="img/about-anish.jpg" class="picture" alt="team-member-image">
+                            </div>
+                            <div class="layer"></div>
+                            <h3>Anish Acharya</h3>
+                            <p class="role">UI/UX Design, Content Writer</p>
+                            <p class="desc">Anish is a tech-loving sophomore at Centennial High School. His favorite hobbies include building PCs, watching anime, and playing tennis with friends. He is ranked within the Top 20 in the state for General Mathematics in TMSCA. He received a Presidential Volunteer Service Award at just 14 years of age. He plans to continue playing on the Varsity tennis team at Centennial throughout high school.</p>
+                            <a href="https://www.instagram.com/anish_thegod/" target="_blank" class="insta"><i class="fab fa-instagram fa-2x"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="about-card">
+                            <div class="member-img">
+                                <img src="img/about-rahul.jpg" class="picture" alt="team-member-image">
+                            </div>
+                            <div class="layer"></div>
+                            <h3>Rahul Muppavarapu</h3>
+                            <p class="role">Front End</p>
+                            <p class="desc">Rahul is a STEM-driven individual who is endeavoring to create a future. Fascinated by this idea, he is expanding his knowledge through several extracurricular courses such as JavaScript programming and discrete mathematics. Along with his math and technology passion, he is enjoying a tennis career on the high school varsity tennis team. He plans to create a brighter future for himself and everyone around him.</p>
+                            <a href="https://www.instagram.com/rahul_mupp/" target="_blank" class="insta"><i class="fab fa-instagram fa-2x"></i></a>
+                        </div>
+                        <div class="about-card">
+                            <div class="member-img">
+                                <img src="img/about-aarav.png" class="picture" alt="team-member-image">
+                            </div>
+                            <div class="layer"></div>
+                            <h3>Aarav Sangani</h3>
+                            <p class="role">Member</p>
+                            <p class="desc">Aarav is an athletics loving sophomore at Centennial High school. He enjoys playing tennis, discovering new sights in nature, and spending time with friends and family. He was previously ranked top 50 in Texas under the 14s age group for tennis. He is discovering different languages in the computer science field, while being top three on the varsity tennis team and he plans to keep playing.</p>
+                            <a href="https://www.instagram.com/aaravsangani_je/" target="_blank" class="insta"><i class="fab fa-instagram fa-2x"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </body>
+</html>
+

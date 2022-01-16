@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Lato";
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #f1f1f1;
+  display: flex;
+}
+
+/* Styling the navigation */
+
+.logo {
+  padding: 30px 0;
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  background: #4739d7;
+  height: 100vh;
+  width: 250px;
+  padding-left: 30px;
+  font-size: 20px;
+}
+
+.nav-list {
+  color: #fff;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  display: block;
+  padding: 25px 0;
+  padding-left: 35px;
+  color: #fff;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  transition: all 0.2s;
+  background: #4739d7;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  background: rgb(241, 241, 241);
+  color: #4739d7;
+}
+
+.active-link:link,
+.active-link:visited {
+  background: rgb(241, 241, 241);
+  color: #4739d7;
+}
+
+.nav-dashboard-btn {
+  border-radius: 2rem;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: #fff;
+  color: #4739d7;
+  padding: 5px 10px 7px 10px;
+  transition: all 0.2s;
+  position: absolute;
+  bottom: 20px;
+  left: 93px;
+}
+
+.nav-dashboard-btn:hover {
+  cursor: pointer;
+  transition: all 0.4s;
+  background-color: rgba(173, 173, 173, 0.2);
+  color: rgb(241, 241, 241);
+}
+
+/* Creating the cards */
+
+.heading {
+  margin: 1rem 3rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  margin: 1rem 20rem;
+  margin-right: 0rem;
+  font-size: 18px;
+  width: 1064px;
+  height: 700px;
+}
+
+/* Making the card heading */
+
+.card-header {
+  background-color: #4739d7;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  border-radius: 1rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.card-header h1 {
+  font-size: 64px;
+  text-align: center;
+  color: #fff;
+}
+
+.host-name {
+  font-size: 24px;
+  color: #afafaf;
+  text-align: center;
+  padding-top: 80px;
+}
+
+/* Organizing the card article */
+
+.card-info {
+  display: flex;
+  text-align: center;
+}
+
+.event-info {
+  flex: 1;
+}
+
+.event-desc {
+  flex: 2;
+}
+
+.info {
+  margin-bottom: 5rem;
+  color: #8e8b8b;
+}
+
+.info:first-child {
+  margin-top: 3rem;
+}
+
+/* Styling the register button */
+
+.register-btn {
+  border-radius: 2rem;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: #4739d7;
+  color: #fff;
+  padding: 10px 40px;
+  transition: all 0.2s;
+}
+
+.register-btn:hover {
+  cursor: pointer;
+  transition: all 0.4s;
+  background-color: rgb(241, 241, 241);
+  color: #4739d7;
+}
+
+.desc {
+  margin: 3rem;
+  line-height: 35px;
+  color: #8e8b8b;
+}
+
+/* Styling the seat selection for the theater and dining options */
+
+.seat-selection,
+.selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 533px;
+}
+
+.container {
+  margin-top: 1rem;
+  perspective: 30rem;
+}
+
+.dining-container {
+  margin-top: 2rem;
+}
+
+.container:last-child span,
+.dining-container:last-child span {
+  color: #4739d7;
+}
+
+/* Spacing apart the rows in a 3-5-3 fashion for a theater event */
+
+.row:nth-of-type(5),
+.rows:nth-of-type(3) {
+  margin-bottom: 2rem;
+}
+
+.seat,
+.seats {
+  color: #000;
+  margin: 8px;
+}
+
+.selected,
+.select {
+  color: #4739d7;
+}
+
+.seat.occupied,
+.seats.occupy {
+  color: #adadad;
+}
+
+.seat:nth-of-type(3),
+.seats:nth-of-type(5) {
+  margin-right: 60px;
+}
+
+.seat:nth-of-type(9) {
+  margin-left: 60px;
+}
+
+/* Creating an enlargement animation when hovered */
+
+.seat:not(.occupied):hover,
+.seats:not(.occupy):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.selection-list .seat:not(.occupied):hover,
+.list .seats:not(.occupy):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+/* Organizing the rows of seats */
+
+.selection-list ul,
+.list ul {
+  display: flex;
+}
+
+.selection-list ul li,
+.list ul li {
+  display: flex;
+  align-items: center;
+  margin: 0 28px;
+}
+
+.selection-list ul li small {
+  margin-left: 5px;
+}
+
+.row,
+.rows {
+  display: flex;
+}
+
+/* Designing a screen for a theater event */
+
+.screen {
+  background-color: #8e8b8b;
+  height: 70px;
+  width: 100%;
+  margin: 15px 0;
+  transform: rotateX(-15deg);
+  box-shadow: 0 3px 10px rgba(142, 139, 139, 0.75);
+}
+
+.selection-text {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Creating a dining event tables */
+
+.table-1 {
+  background-color: #8e8b8b;
+  height: 70px;
+  width: 50%;
+  margin: 15px 0;
+  margin-right: 30px;
+  border-radius: 1rem;
+  box-shadow: 0 3px 10px rgba(142, 139, 139, 0.75);
+}
+
+.table-2 {
+  background-color: #8e8b8b;
+  height: 70px;
+  width: 50%;
+  margin: 15px 0;
+  margin-left: 30px;
+  border-radius: 1rem;
+  box-shadow: 0 3px 10px rgba(142, 139, 139, 0.75);
+}
+
+.hidden {
+  visibility: hidden;
+}

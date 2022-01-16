@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Lato";
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #f1f1f1;
+  display: flex;
+}
+
+/* Creating the navigation */
+
+.logo {
+  padding: 30px 0;
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sidebar {
+  background: #4739d7;
+  height: 100vh;
+  width: 250px;
+  padding-left: 30px;
+  font-size: 20px;
+}
+
+.nav-list {
+  color: #fff;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  display: block;
+  padding: 25px 0;
+  padding-left: 35px;
+  color: #fff;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  transition: all 0.2s;
+  background: #4739d7;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  background: rgb(241, 241, 241);
+  color: #4739d7;
+}
+
+.active-link:link,
+.active-link:visited {
+  background: rgb(241, 241, 241);
+  color: #4739d7;
+}
+
+.nav-dashboard-btn {
+  border-radius: 2rem;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: #fff;
+  color: #4739d7;
+  padding: 5px 10px 7px 10px;
+  transition: all 0.2s;
+  position: absolute;
+  bottom: 20px;
+  left: 93px;
+}
+
+.nav-dashboard-btn:hover {
+  cursor: pointer;
+  transition: all 0.4s;
+  background-color: rgba(173, 173, 173, 0.2);
+  color: rgb(241, 241, 241);
+}
+
+.heading {
+  margin: 1rem 3rem;
+  font-size: 28px;
+}
+
+/* Creating the card */
+
+.card-heading {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #4739d7;
+}
+
+.card {
+  width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 1rem;
+  margin: 3rem;
+  padding: 3rem;
+  padding-bottom: 10rem;
+}
+
+/* Making the posts list */
+
+.posts {
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin: 3rem 0rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgb(196, 196, 196);
+  border-bottom: none;
+}
+
+.list-item {
+  display: block;
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 1rem;
+  margin: 10px 0;
+  padding: 20px 10px;
+}
+
+.list-item:link,
+.list-item:visited {
+  color: #4739d7;
+}
+
+.list-item {
+  position: relative;
+}
+
+/* Adding a hover animation */
+
+.list-item::before {
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  right: auto;
+  width: 0;
+  height: 2px;
+  background-color: #4739d7;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .list-item:hover::before {
+    left: 10px;
+    right: auto;
+    width: 21%;
+  }
+}

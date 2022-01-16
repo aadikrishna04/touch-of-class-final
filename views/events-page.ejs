@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Events</title>
+    <link rel="stylesheet" href="/events-page.css" />
+  </head>
+  <body>
+    <header class="dashboard">
+      <nav class="sidebar">
+        <a href="/"><h2 class="logo">Touch of Class</h2></a>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="/dashboard">Profile</a></li>
+          <li>
+            <a class="nav-link active-link" href="/events">Featured Events</a>
+          </li>
+          <li><a class="nav-link" href="/search">Search</a></li>
+          <li><a class="nav-link" href="/host">Host</a></li>
+        </ul>
+        <form class="log-out" action="/logout" method="POST">
+          <button class="nav-dashboard-btn" id="account-btn">Log Out</button>
+        </form>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h2 class="heading">Events</h2>
+      <div class="card">
+        <h2 class="card-heading">Featured Events</h2>
+        <p class="posts">Events: 3</p>
+
+        <ul class="events-list">
+          <li class="links">
+            <a href="/events/61e39fa7e3541fd2a6a812fb" class="list-item"
+              ><strong>Concerto At Dallas Park</strong> on 2022-01-28</a
+            >
+          </li>
+          <li class="links">
+            <a href="/events/61e39557090387c21dffb66c" class="list-item"
+              ><strong>5th Birthday Party</strong> on 2022-02-24</a
+            >
+          </li>
+          <li class="links">
+            <a href="/events/61e395e9f2c643c364772a30" class="list-item"
+              ><strong>Brunch Buddies</strong> on 03-08-2022</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

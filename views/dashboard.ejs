@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="/new-dashboard-style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width,
+    intial-scale=1.0" />
+  </head>
+
+  <body>
+    <header class="dashboard">
+      <nav class="sidebar">
+        <a href="/"><h2 class="logo">Touch of Class</h2></a>
+        <ul class="nav-list">
+          <li><a class="nav-link active-link" href="/dashboard">Profile</a></li>
+          <li><a class="nav-link" href="/events">Featured Events</a></li>
+          <li><a class="nav-link" href="/search">Search</a></li>
+          <li><a class="nav-link" href="/host">Host</a></li>
+        </ul>
+        <form class="log-out" action="/logout" method="POST">
+          <button class="nav-dashboard-btn" id="account-btn">Log Out</button>
+        </form>
+      </nav>
+    </header>
+    <article class="info">
+      <h2 class="heading">Profile</h2>
+      <div class="card">
+        <h2 class="card-heading">Profile Information</h2>
+        <h3 class="section-heading">GENERAL</h3>
+        <div class="pf-info">
+          <div class="first-col" />
+            <p>First Name</p>
+            <input readonly type="text" placeholder="Type here" value="<%=user.firstName%>"/>
+            <p>Username</p>
+            <input readonly type="text" placeholder="Type here" value="<%=user.username%>"/>
+            <h3 class="section-heading">CONTACT</h3>
+            <p class="phone">Mobile/Phone</p>
+            <input readonly type="text" placeholder="Type here" value="<%=user.phone%>"/>
+            <p>Address</p>
+            <input readonly type="text" placeholder="Type here" value="<%=user.address%>"/>
+          </div>
+
+          <div class="second-col" />
+            <p>Middle Name</p>
+            <input readonly type="text" placeholder="Optional" />
+            <div class="password-wrapper"> 
+              <p>Password</p> 
+              <input readonly type="password" placeholder="Type here" id="pswrd_1" value="<%=user.password%>"/>
+              <span class="eye2" onclick="toggle()"> 
+                <i id="appear1" class="fa fa-eye"></i>
+                <i id="appear2" class="fa fa-eye-slash"></i> 
+              </span> 
+            </div>
+
+            <script>
+              function toggle() {
+                let a = document.getElementById("pswrd_1");
+                let b = document.getElementById("appear1");
+                let c = document.getElementById("appear2");
+
+                if(a.type === 'password') {
+                  a.type = "text";
+                  b.style.display = "block";
+                  c.style.display = "none";
+                }
+                else {
+                  a.type = "password";
+                  b.style.color = "#4739d7";
+                  b.style.display = "none";
+                  c.style.display = "block";
+                }
+              }
+            </script>
+            <h3 class="section-heading">ㅤ</h3>
+            <p>Whatsapp</p>
+            <input readonly type="text" placeholder="Type here" value="<%=user.whatsApp%>"/>
+            <p>City</p>
+            <input readonly type="text" placeholder="Type here" value="<%=user.city%>"/>
+          </div>
+
+          <div class="third-col" />
+            <p>Last Name</p>
+            <input readonly type="text" placeholder="Type here" value="<%=user.lastName%>"/>
+            <div class="password-wrapper-2">
+              <p>Confirm Password</p>
+              <input readonly type="password" placeholder="Type here" id="pswrd_2" value="<%=user.password%>"/>
+              <span class="eye" onclick="myFunction()"> 
+                <i id="hide1" class="fa fa-eye"></i>
+                <i id="hide2" class="fa fa-eye-slash"></i> 
+              </span> 
+            </div>
+
+            <script>
+              function myFunction() {
+                var x = document.getElementById("pswrd_2");
+                var y = document.getElementById("hide1");
+                var z = document.getElementById("hide2");
+
+                if(x.type === 'password') {
+                  x.type = "text";
+                  y.style.display = "block";
+                  z.style.display = "none";
+                }
+                else {
+                  x.type = "password";
+                  y.style.color = "#4739d7";
+                  y.style.display = "none";
+                  z.style.display = "block";
+                }
+              }
+            </script>
+
+            <h3 class="section-heading">ㅤ</h3>
+            <p>Email</p>
+            <input readonly type="text" placeholder="Type here" value="<%=user.email%>"/>
+            <p>State</p>
+            <input readonly type="text" placeholder="Type here" value="<%=user.state%>"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="card2">
+        <img src="/img/profile.png" class="profile" />
+        <h2 class="name">Your Name</h2>
+        <h4 class="since">Member since 2021</h4>
+        <h4>0</h4>
+        <p>Events Hosted</p>
+      </div>
+    </article>
+  </body>
+</html>

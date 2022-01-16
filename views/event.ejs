@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/event.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.0/css/all.min.css"
+    />
+    <title>Event</title>
+  </head>
+  <body>
+    <header class="dashboard">
+      <nav class="sidebar">
+        <a href="/"><h2 class="logo">Touch of Class</h2></a>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="/dashboard">Profile</a></li>
+          <li>
+            <a class="nav-link active-link" href="/events">Featured Events</a>
+          </li>
+          <li><a class="nav-link" href="/search">Search</a></li>
+          <li><a class="nav-link" href="/host">Host</a></li>
+        </ul>
+        <form class="log-out" action="/logout" method="POST">
+          <button class="nav-dashboard-btn" id="account-btn">Log Out</button>
+        </form>
+      </nav>
+    </header>
+    <article>
+      <h2 class="heading">Event</h2>
+      <div class="card">
+        <div class="card-header">
+          <h1><%=event.title%></h1>
+          <h2 class="host-name">Host: <%=event.host.name%></h2>
+        </div>
+        <div class="card-info">
+          <div class="event-info">
+            <p class="info">Date: <%=event.date%></p>
+            <p class="info">Time: <%=event.time%></p>
+            <p class="info">Address: <%=event.address%></p>
+            <form>
+              <button class="register-btn">Register</button>
+            </form>
+          </div>
+          <div class="event-desc">
+            <p class="desc"><%=event.desc%></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h1>Theater Seat Selection</h1>
+        </div>
+
+        <div class="seat-selection">
+          <div class="selection-list">
+            <ul>
+              <li>
+                <div class="seat">
+                  <i class="fa fa-chair fa-2x"></i>
+                </div>
+                <small>Available</small>
+              </li>
+              <li>
+                <div class="seat selected">
+                  <i class="fa fa-chair fa-2x"></i>
+                </div>
+                <small>Selected</small>
+              </li>
+              <li>
+                <div class="seat occupied">
+                  <i class="fa fa-chair fa-2x"></i>
+                </div>
+                <small>Occupied</small>
+              </li>
+            </ul>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+            </div>
+            <div class="row">
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+            </div>
+            <div class="row">
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+            </div>
+            <div class="row">
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+            </div>
+            <div class="row">
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+              <div class="seat">
+                <i class="fa fa-chair fa-2x"></i>
+              </div>
+            </div>
+            <div class="screen"></div>
+            <p class="selection-text">
+              You have selected <span id="count">0</span> seats
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-2">
+        <div class="card-header">
+          <h1>Dining Seat Selection</h1>
+        </div>
+
+        <div class="selection">
+          <div class="list">
+            <ul>
+              <li>
+                <div class="seats">
+                  <i class="fas fa-chair fa-2x"></i>
+                </div>
+                <small>Available</small>
+              </li>
+              <li>
+                <div class="seats select">
+                  <i class="fas fa-chair fa-2x"></i>
+                </div>
+                <small>Selected</small>
+              </li>
+              <li>
+                <div class="seats occupy">
+                  <i class="fas fa-chair fa-2x"></i>
+                </div>
+                <small>Occupied</small>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dining-container">
+            <div class="rows">
+              <div class="seats">
+                <i class="fas fa-chair fa-2x"></i>
+              </div>
+              <div class="seats">
+                <i class="fas fa-chair fa-2x"></i>
+              </div>
+              <div class="seats">
+                <i class="fas fa-chair fa-2x"></i>
+              </div>
+              <div class="seats">
+                <i class="fas fa-chair fa-2x"></i>
+              </div>
+              <div class="seats">
+                <i class="fas fa-chair fa-2x"></i>
+              </div>
+              <div class="seats">
+                <i class="fas fa-chair fa-2x"></i>
+              </div>
+              <div class="seats">
+                <i class="fas fa-chair fa-2x"></i>
+              </div>
+              <div class="seats">
+                <i class="fas fa-chair fa-2x"></i>
+              </div>
+              <div class="seats">
+                <i class="fas fa-chair fa-2x"></i>
+              </div>
+              <div class="seats">
+                <i class="fas fa-chair fa-2x"></i>
+              </div>
+            </div>
+            <div class="rows">
+              <div class="table-1"></div>
+              <div class="table-2"></div>
+            </div>
+            <div class="rows">
+              <div class="seats">
+                <i class="fas fa-chair fa-2x"></i>
+              </div>
+              <div class="seats">
+                <i class="fas fa-chair fa-2x"></i>
+              </div>
+              <div class="seats">
+                <i class="fas fa-chair fa-2x"></i>
+              </div>
+              <div class="seats">
+                <i class="fas fa-chair fa-2x"></i>
+              </div>
+              <div class="seats">
+                <i class="fas fa-chair fa-2x"></i>
+              </div>
+              <div class="seats">
+                <i class="fas fa-chair fa-2x"></i>
+              </div>
+              <div class="seats">
+                <i class="fas fa-chair fa-2x"></i>
+              </div>
+              <div class="seats">
+                <i class="fas fa-chair fa-2x"></i>
+              </div>
+              <div class="seats">
+                <i class="occupy fas fa-chair fa-2x"></i>
+              </div>
+              <div class="seats">
+                <i class="fas fa-chair fa-2x"></i>
+              </div>
+            </div>
+            <p class="selection-text">
+              You have selected <span id="count2">0</span> seats
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+    <script src="/seats.js"></script>
+    <script src="/dining-seats.js"></script>
+  </body>
+</html>

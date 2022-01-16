@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="/create-event.css" rel="stylesheet" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <header class="dashboard">
+      <nav class="sidebar">
+        <a href="/"><h2 class="logo">Touch of Class</h2></a>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="/dashboard">Profile</a></li>
+          <li><a class="nav-link" href="/events">Featured Events</a></li>
+          <li><a class="nav-link" href="/search">Search</a></li>
+          <li><a class="nav-link active-link" href="/host">Host</a></li>
+        </ul>
+        <form class="log-out" action="/logout" method="POST">
+          <button class="nav-dashboard-btn" id="account-btn">Log Out</button>
+        </form>
+      </nav>
+    </header>
+    <article class="info">
+      <h2 class="heading">Create Event</h2>
+      <div class="card">
+        <form class="event" action="/host" method="POST">
+          <h1 class="card-heading">Setup Event</h1>
+          <form>
+            <button type="submit" class="submit-btn">Create</button>
+          <div class="container">
+            <div class="basics">
+              <h3 class="basic-info">Basic Info</h3>
+              <p class="form-field-name">Organizer Name</p>
+              <input type="text" autocomplete="off" class="form-input" name="name" id="Name" />
+              <br />
+              <p class="form-field-name">Organizer E-mail</p>
+              <input type="text" autocomplete="off" class="form-input" name="email" id="email" />
+              <p class="form-field-name">Organizer Phone Number</p>
+              <input type="text" autocomplete="off" class="form-input" name="phone" id="phone" />
+              <p class="form-field-name">Venue Address</p>
+              <input type="text" autocomplete="off" class="form-input" name="address" id="address" />
+            </div>
+            <div class="event-info">
+              <h3 class="section-heading">ㅤ</h3>
+              <p class="form-field-name">Event Date</p>
+              <input type="date" autocomplete="off" class="form-input" name="date" id="date" />
+              <p class="form-field-name">Event Time</p>
+              <input type="time" autocomplete="off" class="form-input" name="time" id="time" />
+              <div class="event-desc">
+                <p class="form-field-name">Event Name</p>
+                <input type="text" autocomplete="off" class="form-input" name="title" id="title" />
+                <p class="form-field-name">Event description</p>
+                <textarea autocomplete="off" class="desc" name="desc" id="desc" maxlength="250"></textarea>
+                <p class="length">250 characters remaining</p>
+                <script>
+                  // Counting characters in box and displaying it
+                  let box = document.getElementById("desc");
+                  let length = document.querySelector(".length");
+                  box.addEventListener("input", () => {
+                    length.innerHTML =
+                      250 - box.value.length + " characters remaining";
+                  });
+                  length.innerHTML = 250 - box.value.length;
+                </script>
+              </div>
+            </div>
+            <div class="event-type">
+              <h3 class="section-heading">ㅤ</h3>
+              <div class="type-select">
+                <h3>Event venue type</h3>
+                <p>Please select one:</p>
+                <input type="radio" id="theater" name="choice" value="theater">
+                <label class="selection" for="theater">Theater</label>
+                <input type="radio" id="dining-hall" name="choice" value="dining-hall">
+                <label class="selection" for="dining-hall">Dining Hall</label>
+              </div>
+            </div>
+          </form>
+        </form>
+      </div>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create an Account</title>
+  <link rel="stylesheet" href="/signUp.css">
+</head>
+<body>
+  <form action="/register" method="POST">
+    <div class="container">
+      <h1 class="register">Sign Up</h1>
+      <p class="instructions">Please fill in this form to create an account.</p>
+      <hr class="line">
+
+      <section class="info">
+        <div class="col-1">
+          <h4>First Name</h4>
+          <input type="text" autocomplete="off" placeholder="Enter First Name" name="firstName" id="firstName" class="fill" required />
+
+          <h4>Last Name</h4>
+          <input type="text" autocomplete="off" placeholder="Enter Last Name" name="lastName" id="lastName" class="fill" required />
+      
+          <h4>Email</h4>
+          <input type="text" autocomplete="off" placeholder="Enter Email" name="email" id="email" class="fill" required />
+      
+          <h4>Password</h4>
+          <input type="password" autocomplete="off" placeholder="Enter Password" name="password" id="password" class="fill" required />
+
+          <h4>Username</h4>
+          <input type="text" autocomplete="off" placeholder="Enter Username" name="username" id="username" class="fill" required />
+        </div>
+
+        <div class="col-2">
+          <h4>Phone</h4>
+          <input type="text" autocomplete="off" placeholder="Enter Phone" name="phone" id="phone" class="fill" required />
+
+          <h4>WhatsApp</h4>
+          <input type="text" autocomplete="off" placeholder="Enter WhatsApp Phone Number" name="whatsApp" id="whatsApp" class="fill" required />
+
+          <h4>Street Address</h4>
+          <input type="text" autocomplete="off" placeholder="Enter Address" name="address" id="address" class="fill" required />
+
+          <h4>City</h4>
+          <input type="text" autocomplete="off" placeholder="Enter City" name="city" id="city" class="fill" required />
+
+          <h4>State (USA)</h4>
+          <input type="text" autocomplete="off" placeholder="Enter State (abbr.)" name="state" id="state" class="fill" required />
+        </div>
+      </section>
+  
+      <p class="terms">By creating an account you agree to our <a href="https://www.freeprivacypolicy.com/live/675e20e9-cab2-45cf-b193-fb24cf445af6" target="_blank">Terms & Conditions</a>. &nbsp Already have an account? <a href="/login">Sign in</a>.</p>
+      <button type="submit" class="registerbtn">Register</button>
+    </div>
+
+  </form>
+</body>
+</html>
